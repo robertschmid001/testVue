@@ -9,14 +9,14 @@ Fork ce dépôt.
 
 Créer toi une nouvelle branche.
 
-Et c'est parti.
 
 Pense à faire de petits commits.
 
-Une fois le test fini,
+Une fois le test fini, fait une pullRequest pour que nous puissions apprécier ton travail.
 
+Let's Go!
 
-## Build Setup
+## Run
 
 ``` bash
 # install dependencies
@@ -25,11 +25,6 @@ npm install
 # serve with hot reload at localhost:8080
 npm run dev
 
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
