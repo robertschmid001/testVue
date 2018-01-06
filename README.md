@@ -1,6 +1,6 @@
 # test-vuejs
 
-Ce test à pour but d'évaluer ta compréhension de framework VueJS.
+Ce test à pour but d'évaluer ta compréhension du framework VueJS.
 Ici rien de compliquer, la doc de [vueJs](http://vuejs.org) sera ton allier.
 
 ## Mise en place
