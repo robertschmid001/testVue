@@ -1,14 +1,14 @@
 # test-vuejs
 
-Ce test à pour but d'évaluer ta compréhension du framework VueJS.
-Ici rien de compliquer, la doc de [vueJs](http://vuejs.org) sera ton allier.
+Ce test a pour but d'évaluer ta compréhension de framework VueJS.
+Ici rien de compliqué, la doc de [vueJs](http://vuejs.org) sera ton alliée.
+
 
 ## Mise en place
 
 Fork ce dépôt.
 
-Créer toi une nouvelle branche.
-
+Crée toi une nouvelle branche.
 
 Pense à faire de petits commits.
 
