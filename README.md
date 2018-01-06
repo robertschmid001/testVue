@@ -1,6 +1,20 @@
 # test-vuejs
 
-> a small test in vue js
+Ce test à pour but d'évaluer ta compréhension de framework VueJS.
+Ici rien de compliquer, la doc de [vueJs](http://vuejs.org) sera ton allier.
+
+## Mise en place
+
+Fork ce dépôt.
+
+Créer toi une nouvelle branche.
+
+Et c'est parti.
+
+Pense à faire de petits commits.
+
+Une fois le test fini,
+
 
 ## Build Setup
 
