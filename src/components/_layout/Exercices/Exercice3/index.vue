@@ -40,7 +40,7 @@
 export default {
   data () {
     return {
-      donnée: {
+      donnee: {
         title: 'Mon super composant',
         content: 'je suis utilisable où tu veux',
         question: 'Classe ou pas classe ?'

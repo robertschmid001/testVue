@@ -41,6 +41,11 @@ export default {
 .hello {
   text-align: center;
 }
+
+.hello img {
+  width: 200px;
+}
+
 .next {
   margin: 50px;
   cursor: pointer;

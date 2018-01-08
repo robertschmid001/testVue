@@ -62,13 +62,12 @@ body {
   width: 100%;
   height: 50vh;
 }
-
-
 .left {
   display: flex;
   justify-content: center;
   margin-top: 8%;
-  width: 15%;
+  margin-right: 15px;
+  width: 20%;
   font-size: 1.2em;
 }
 .right {

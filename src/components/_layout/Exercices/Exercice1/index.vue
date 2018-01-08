@@ -36,6 +36,15 @@
   </div>
 </template>
 <script>
+
+const todo = [{
+  label: 'ma première chose à faire'
+}, {
+  label: 'ma deuxième chose à faire'
+}]
+
+console.log(todo)
+
 export default {
   data () {
     return {

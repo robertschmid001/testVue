@@ -13,7 +13,7 @@
         Ton quatrième défi, utiliser le store.
       </div>
       <div class="content">
-        <p>Le but de cet exercice est de découvrir le store.</p>
+        <p>Le but de cet exercice est de découvrir le store (optionnel).</p>
         <p>Le store te permet de passer des données d'un composant frère à un autre.</p>
         <p>Retourne sur le premier exercice et enregistre les données de ta todo liste d'un un store,</p>
         <p>puis affiche les sur cette page.</p>

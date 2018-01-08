@@ -21,11 +21,11 @@ const routes = [
     component: Home,
     name: 'home'
   },
-  { path: '/fisrt', component: Exercice1, name: 'exercice1' },
-  { path: '/second', component: Exercice2, name: 'exercice2' },
-  { path: '/third', component: Exercice3, name: 'exercice3' },
-  { path: '/fourth', component: Exercice4, name: 'exercice4' },
-  { path: '/fifth', component: Exercice5, name: 'exercice5' }
+  { path: '/exercice1', component: Exercice1, name: 'exercice1' },
+  { path: '/exercice2', component: Exercice2, name: 'exercice2' },
+  { path: '/exercice3', component: Exercice3, name: 'exercice3' },
+  { path: '/exercice4', component: Exercice4, name: 'exercice4' },
+  { path: '/exercice5', component: Exercice5, name: 'exercice5' }
 ]
 
 const router = new VueRouter({
