@@ -1,3 +1,4 @@
+
 <template>
   <div class="first-container">
     <div class="header">
@@ -30,25 +31,49 @@
     <div class="separator">
     </div>
     <div class="right">
-      Liste des composants : <span @click="changeTheDisplayedComponent('composant1')">composants1</span>, <span @click="changeTheDisplayedComponent('composant2')">composant2</span>, <span @click="changeTheDisplayedComponent('composant3')">composant3</span>
+      Liste des composants :<span @click="changeTheDisplayedComponent('composant1')">composants1</span>
+                            <span @click="changeTheDisplayedComponent('composant2')">composants2</span>
+                            <span @click="changeTheDisplayedComponent('composant3')">composants3</span>
       <!-- ton code ici -->
+
+        <ul>
+          <li><component1></component1></li>
+          <!-- Show a list of components, maybe with an active state. 
+          PS the whole <ul> should be an active state? maybe inside a div
+            *Check if <li><ul> are needed.-->
+        </ul>
+
     </div>
   </div>
   </div>
 </template>
-<script>
-export default {
-  data () {
-    return {
-    }
-  },
-  methods: {
 
-  },
-  components: {
-  }
+<script>
+  import Component1 from './_subs/Component1.vue'
+  import Component2 from './_subs/Component2.vue'
+  import Component3 from './_subs/Component3.vue'
+
+export default {
+    data () {
+      return {
+      }
+    },
+    methods: {
+      changeTheDisplayedComponent: function () {
+        /* CODE: Probably state changes with a couple of 'If' 
+        example, if click composant1, comp1=true,comp2=false,comp3=false
+        Or three seperate methods, but would have to modify the click events.*/
+        
+      }
+    },
+    components: {
+      Component1,
+      Component2,
+      Component3
+    }
 }
 </script>
+
 <style>
  .right span {
    cursor: pointer;
