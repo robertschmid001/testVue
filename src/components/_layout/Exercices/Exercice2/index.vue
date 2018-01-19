@@ -31,18 +31,15 @@
     <div class="separator">
     </div>
     <div class="right">
-      Liste des composants :<span @click="changeTheDisplayedComponent('composant1')">composants1</span>
-                            <span @click="changeTheDisplayedComponent('composant2')">composants2</span>
-                            <span @click="changeTheDisplayedComponent('composant3')">composants3</span>
+      Liste des composants :<span @click="changeTheDisplayedComponent('composant1')">composant1</span>
+                            <span @click="changeTheDisplayedComponent('composant2')">composant2</span>
+                            <span @click="changeTheDisplayedComponent('composant3')">composant3</span>
       <!-- ton code ici -->
-
-        <ul>
-          <li><component1></component1></li>
-          <!-- Show a list of components, maybe with an active state. 
-          PS the whole <ul> should be an active state? maybe inside a div
-            *Check if <li><ul> are needed.-->
-        </ul>
-
+      <div>
+        <component1 v-if="comp1" ></component1>
+        <component2 v-if="comp2" ></component2>
+        <component3 v-if="comp3" ></component3>
+      </div>     
     </div>
   </div>
   </div>
@@ -56,15 +53,30 @@
 export default {
     data () {
       return {
+        comp1: false,
+        comp2: false,
+        comp3: false
       }
     },
     methods: {
-      changeTheDisplayedComponent: function () {
-        /* CODE: Probably state changes with a couple of 'If' 
-        example, if click composant1, comp1=true,comp2=false,comp3=false
-        Or three seperate methods, but would have to modify the click events.*/
-        
-      }
+      changeTheDisplayedComponent(text) {
+        let newtext = text
+
+  if (newtext == "composant1"){
+ this.comp1=true;
+ this.comp2=false;
+ this.comp3=false;
+} else if (newtext == "composant2"){
+ this.comp1=false;
+ this.comp2=true;
+ this.comp3=false;
+} else if (newtext == "composant3"){
+ this.comp1=false;
+ this.comp2=false;
+ this.comp3=true;
+} else return console.log("error");
+  
+}
     },
     components: {
       Component1,
