@@ -31,7 +31,15 @@
     <div class="separator">
     </div>
     <div class="right">
-      <!-- ton code ici -->
+
+<div>
+<app-learning></app-learning>
+</div>
+
+
+
+
+
     </div>
   </div>
   </div>
