@@ -39,8 +39,35 @@
         <component1 v-if="comp1" ></component1>
         <component2 v-if="comp2" ></component2>
         <component3 v-if="comp3" ></component3>
-      </div>     
+      </div> 
+
+      <div>
+        <strong> <p>2eme solution, moins de code requis mais je devrai altérer vos fonctions. C'est plus propre et maintainable.
+        </p>
+        <button @click="selectedComponent = 'comp1'">Composant1</button>
+        <button @click="selectedComponent = 'comp2'">Composant2</button>      
+        <button @click="selectedComponent = 'comp3'">Composant3</button>
+        <component :is='selectedComponent'></component>
+        <p>
+          ...<br>
+          <br>
+          export default{ <br>
+          ...<br>
+          return{<br>
+          selectedComponent: 'comp1',<br>
+            }<br>
+          }<br>
+          <br>
+          component: {<br>
+            comp1: Component1,<br>
+            comp2: Component2,<br>
+            comp3: Component3<br>
+          }<br>
+      </p> 
+      </strong> 
+    </div> 
     </div>
+
   </div>
   </div>
 </template>
@@ -55,7 +82,7 @@ export default {
       return {
         comp1: false,
         comp2: false,
-        comp3: false
+        comp3: false,
       }
     },
     methods: {
@@ -81,7 +108,7 @@ export default {
     components: {
       Component1,
       Component2,
-      Component3
+      Component3,
     }
 }
 </script>

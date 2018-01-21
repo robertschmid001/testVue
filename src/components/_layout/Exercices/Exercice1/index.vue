@@ -31,23 +31,20 @@
     </div>
     <div class="right">
       <!-- ton code ici -->
-    <div>
-      <input v-model="newLabel" @keyup.enter="addTodo" placeholder="UNE NOUVELLE TACHE">
-      <div class="wrap-list">
+    
+    <div class="wrap-content">
+      <input class="inputNewLabel" v-model="newLabel" @keyup.enter="addTodo" placeholder="UNE NOUVELLE TACHE">
       <ul class="list">
         <li v-for="todo in todos">
           <div class="listedItems">
             <input type="checkbox" v-model="todo.completed">
             <label>{{ todo.label }}</label>
-            <button @click="deleteTodo(todo)">Delete</button>
+            <button class="inputDelete" @click="deleteTodo(todo)">Delete</button>
           </div>
         </li>
       </ul>
-      </div>
+          <span class="todo-count"><strong>{{remaining}}</strong> taches à faire</span>
     </div>
-  <footer class="footer">
-    <span class="todo-count"><strong>{{remaining}}</strong> taches à faire</span>
-  </footer>
     </div>
   </div>
   </div>
@@ -102,9 +99,42 @@ export default {
     }
   }
 };
-
 </script>
 
 <style>
+.listedItems {
+  box-shadow: 1px 1px 1px 1px;
+  border-radius: 5px;
+  margin: 2px;
+  padding: 2px;
+}
+.wrap-content{
+  width:600px;
+  background-color:white;
+  padding: 30px;
+  margin: 0;
 
+}
+.inputNewLabel{
+  height: 20px;
+  width: 100%;
+  border-radius: 5px;
+}
+li{
+  list-style-type: none;
+  padding-bottom: 2px;
+  margin: 0;
+}
+.first-container{
+  background-color: lightgrey;
+}
+ul{
+  padding: 0;
+  margin: 0;
+  align-content: center;
+}
+.inputDelete{
+  float:right;
+  border-radius: 5px;
+}
 </style>
