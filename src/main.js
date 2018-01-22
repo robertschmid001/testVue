@@ -37,6 +37,16 @@ const router = new VueRouter({
 const store = new Vuex.Store({
   state: {
     // ton state
+    todos: [
+      {
+        completed: false,
+        label: "ma première chose à faire"
+      },
+      {
+        completed: false,
+        label: "ma deuxième chose à faire"
+      }
+    ]
   },
   mutations: {
   // ton setter
@@ -46,6 +56,7 @@ const store = new Vuex.Store({
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store,
   template: '<App/>',
   components: { App },
   router,

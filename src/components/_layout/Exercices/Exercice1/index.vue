@@ -52,36 +52,25 @@
 
 
 <script>
-const todo = [
-  {
-    label: "ma première chose à faire"
+ const hallo = [
+   {
+     label:  "ma première chose à faire" ,
   },
   {
-    label: "ma deuxième chose à faire"
-  }
-];
+    label:  "ma deuxième chose à faire" ,
+  } 
+]; 
 
-console.log(todo);
+ console.log(hallo);
 
 export default {
   data() {
-    return {
-      todos: [
-        {
-          completed: false,
-          label: "ma première chose à faire"
-        },
-        {
-          completed: false,
-          label: "ma deuxième chose à faire"
-        }
-      ]
-    };
+    return {};
   },
 
   methods: {
     addTodo() {
-      this.todos.unshift({
+      this.$store.state.todos.unshift({
         completed: false,
         label: this.newLabel
       });
@@ -89,13 +78,17 @@ export default {
     },
 
     deleteTodo(todo) {
-      this.todos = this.todos.filter(i => i !== todo);
+      this.$store.state.todos = this.$store.state.todos.filter(i => i !== todo);
     }
   },
 
   computed: {
+    todos() {
+      return this.$store.state.todos;
+    },
+
     remaining() {
-      return this.todos.filter(todo => !todo.completed).length;
+      return this.$store.state.todos.filter(todo => !todo.completed).length;
     }
   }
 };
@@ -108,33 +101,32 @@ export default {
   margin: 2px;
   padding: 2px;
 }
-.wrap-content{
-  width:600px;
-  background-color:white;
+.wrap-content {
+  width: 600px;
+  background-color: white;
   padding: 30px;
   margin: 0;
-
 }
-.inputNewLabel{
+.inputNewLabel {
   height: 20px;
   width: 100%;
   border-radius: 5px;
 }
-li{
+li {
   list-style-type: none;
   padding-bottom: 2px;
   margin: 0;
 }
-.first-container{
+.first-container {
   background-color: lightgrey;
 }
-ul{
+ul {
   padding: 0;
   margin: 0;
   align-content: center;
 }
-.inputDelete{
-  float:right;
+.inputDelete {
+  float: right;
   border-radius: 5px;
 }
 </style>

@@ -33,7 +33,17 @@
     <div class="separator">
     </div>
     <div class="right">
-      <!-- ton code ici -->
+
+    <div class="wrap-content">
+      <ul class="list">
+        <li v-for="todo in todos">
+          <div class="listedItems">
+            <label>{{ todo.label }}</label>
+          </div>
+        </li>
+      </ul>
+          <span class="todo-count"><strong>{{remaining}}</strong> taches à faire</span>
+    </div>
     </div>
   </div>
   </div>
@@ -52,9 +62,49 @@ export default {
   methods: {
 
   },
+  computed: {
+    todos() {
+      return this.$store.state.todos;
+    },
+
+    remaining() {
+      return this.$store.state.todos.filter(todo => !todo.completed).length;
+    }
+  },
+
   components: {
   }
 }
 </script>
 <style>
+.listedItems {
+  box-shadow: 1px 1px 1px 1px;
+  border-radius: 5px;
+  margin: 2px;
+  padding: 2px;
+}
+.wrap-content {
+  width: 600px;
+  background-color: white;
+  padding: 30px;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+  padding-bottom: 2px;
+  margin: 0;
+}
+.first-container {
+  background-color: lightgrey;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  align-content: center;
+}
+.inputDelete {
+  float: right;
+  border-radius: 5px;
+}
 </style>
