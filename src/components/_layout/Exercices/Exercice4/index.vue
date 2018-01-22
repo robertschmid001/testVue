@@ -62,6 +62,7 @@ export default {
   methods: {
 
   },
+  
   computed: {
     todos() {
       return this.$store.state.todos;
